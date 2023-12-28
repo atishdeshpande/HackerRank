@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   int l , q;
+    cin >> l >> q;
+    vector<vector<int>> arr_2d;
+    for(int i = 0 ; i < l ; i++){
+        int arr_size;
+        cin >> arr_size;
+        vector<int> temp;
+        for(int j = 0 ; j < arr_size ; j++){
+            int next_num;
+            cin >> next_num;
+            temp.push_back(next_num);
+        }
+        arr_2d.push_back(temp);
+    }
+    
+    for(int i = 0 ; i < q ; i++){
+        int r , c;
+        cin >> r >> c;
+        cout << arr_2d[r][c] << endl;
+    }
+    
+    return 0;
+}   
+    
