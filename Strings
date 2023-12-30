@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+	
+    void swap(char &c1, char &c2){
+    c1 = c1+c2;
+    c2 = c1-c2;
+    c1 = c1-c2;
+    }
+int main() {
+    string a, b;
+    cin>>a>>b;
+    
+    cout<<a.size()<<" "<<b.size()<<endl;
+    cout<<a+b<<endl;
+    
+    swap(a[0], b[0]);
+    cout<<a<<" "<<b<<endl;
+  
+    return 0;
+}
